@@ -32,7 +32,8 @@ jobs:
           python-version: ${{ matrix.python-version.version }}
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip --with dev
+          python -m pip install --upgrade pip
+          pip install -e .[dev]
       - name: Lint with black
         run: |
           python -m black scripts --required-version 26.3.1 --check -t ${{ matrix.python-version.black-version }}
