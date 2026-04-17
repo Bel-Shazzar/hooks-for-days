@@ -1,0 +1,26 @@
+[project]
+name = "hooks-for-days"
+version = "0.1.0"
+description = "A collection of pre-commit hooks for various purposes."
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = []
+authors = [{ name = "Bel Shazzar", email = "belshazzar314+github@gmail.com" }]
+maintainers = [
+    { name = "Bel Shazzar", email = "belshazzar314+github@gmail.com" },
+]
+license-files = ["LICENSE"]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+]
+
+[project.urls]
+Homepage = "https://github.com/Bel-Shazzar/hooks-for-days"
+Repository = "https://github.com/Bel-Shazzar/hooks-for-days"
+Issues = "https://github.com/Bel-Shazzar/hooks-for-days/issues"
+
+
+[project.scripts]
+copied-lines-at-file-end = "scripts.copied_lines_at_file_end:main"
