@@ -1,9 +1,13 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
 [project]
 name = "hooks-for-days"
 version = "0.1.0"
 description = "A collection of pre-commit hooks for various purposes."
 readme = "README.md"
-requires-python = ">=3.14"
+requires-python = ">=3.12"
 dependencies = []
 authors = [{ name = "Bel Shazzar", email = "belshazzar314+github@gmail.com" }]
 maintainers = [
@@ -14,6 +18,14 @@ classifiers = [
     "Intended Audience :: Developers",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3 :: Only",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["scripts"]
+
+[dependency-groups]
+dev = [
+    "black==26.3.1",
 ]
 
 [project.urls]

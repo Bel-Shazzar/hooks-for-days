@@ -1,5 +1,5 @@
 - id: copied_lines_at_file_end
   name: Check for copied lines at the end of files
-  entry: copied_lines_at_file_end
+  entry: copied-lines-at-file-end
   language: python
   types: [ text ]
