@@ -33,10 +33,11 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install uv --upgrade pip
+          uv venv
           uv pip install . --group dev
       - name: Lint with black
         run: |
-          python -m black scripts --required-version 26.3.1 --check -t ${{ matrix.python-version.black-version }}
+          uv run python -m black scripts --required-version 26.3.1 --check -t ${{ matrix.python-version.black-version }}
       - name: Test with unittest
         run: |
-          python -m unittest -v
+          uv run python -m unittest -v
